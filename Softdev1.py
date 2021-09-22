@@ -1,3 +1,7 @@
+# Justin Zou, Mark Zhu, Han Zhang (Team MJH)
+# SoftDev
+# K01 -- Python Random Name Generator
+# 2021-09-22
 import random
 
 def printNames():
