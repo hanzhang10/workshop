@@ -1,6 +1,6 @@
 # Mark Zhu, Justin Zou, Han Zhang (Team MJH)
 # SoftDev
-# K01 -- StI/O: Divine your Destiny!
+# K06 -- StI/O: Divine your Destiny!
 # 2021-09-28
 
 import random
