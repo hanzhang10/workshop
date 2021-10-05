@@ -16,7 +16,7 @@ def main():
     return heading() + "\n" + occupations()
 
 def heading():
-    return "<h3> Mark Zhu, Justin Zou, Han Zhang </h3>"
+    return "<h3> TEAM MJH: Mark Zhu(Bob the 3rd Jr), Justin Zou(Piggy), Han Zhang(Sirap) </h3>"
 
 def occupations():
     return randomoccupation() + listoccupations()
