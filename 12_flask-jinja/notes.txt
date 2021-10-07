@@ -30,5 +30,4 @@ then it will display fooooo as the title and then
 Discoveries:
 @app.route gives the route to the url after https://localhost:5000.
 So, https://localhost:5000/my_foist_template is the correct url and our prediction was wrong.
-/static folder in flask has unique application.
 <title> tag sets the name of the tab(DIFFERENT FROM HEADING)
