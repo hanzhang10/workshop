@@ -10,6 +10,10 @@ import csv
 
 app = Flask(__name__)  # create instance of class Flask
 
+@app.route("/")
+def index():
+    return "<h1>Home Page</h1>"
+
 @app.route("/occupyflaskst")  # assign fxn to route
 
 def main():
