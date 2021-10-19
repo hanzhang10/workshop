@@ -1,7 +1,7 @@
 # Team Whales: Hebe Huang, Josephine Lee, Han Zhang
 # SoftDev
-# K14: Form and Function
-# 2021-10-14
+# K15: Sessions Greetings
+# 2021-10-18
 
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
@@ -63,9 +63,9 @@ def authenticate():
             if pas == 'password':
                 return render_template('response.html',method = request.method, user = user)  #correct login
             else:
-                return render_template('error.html') #returns password error
+                return render_template('error.html', type = 'password') #returns password error
         else: 
-            return render_template('error.html') #returns username error
+            return render_template('error.html', type = 'username') #returns username error
     else:
         user = request.args['username']
         pas = request.args['password']
@@ -73,9 +73,9 @@ def authenticate():
             if request.args['password'] == 'password':
                 return render_template('response.html',method = request.method, user = request.args['username'])  #correct login
             else:
-                return render_template('error.html', type = 'username') #returns password error
+                return render_template('error.html', type = 'password') #returns password error
         else: 
-            return render_template('error.html', type='password') #returns username error
+            return render_template('error.html', type='username') #returns username error
     
     
     # returns response.html with the inputs method and user.
