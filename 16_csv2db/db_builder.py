@@ -13,32 +13,24 @@ db = sqlite3.connect("Whales") #open if file exists, otherwise create
 c = db.cursor()               #facilitate db ops -- you will use cursor to trigger db events
 
 #==========================================================
-c.execute("CREATE TABLE roster(name TEXT, age INTEGER, id INTEGER)")
+c.execute("CREATE TABLE IF NOT EXISTS roster(name TEXT, age INTEGER, id INTEGER)") #creates table if one does not exist
 
 # < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
 with open("students.csv", mode = 'r') as students:  #reads in csv file
     file = csv.DictReader(students)
     for lines in file:                              #iterates through csv rows
-        name = file['name']
-        age = file['age']
-        id = file['id']
-        script = "INSERT INTO roster VALUES(\"" + name + "\"," + age + "," + id + ")" #scripts 
+        script = "INSERT INTO roster VALUES(\"" + lines['name'] + "\"," + lines['age'] + "," + lines['id'] + ")" #scripts 
         c.execute(script)
 
-command = ""          # test SQL stmt in sqlite3 shell, save as string
-c.execute(command)    # run SQL statement
+c.execute("CREATE TABLE IF NOT EXISTS courses(code TEXT, mark INTEGER, id INTEGER)") #creates table if one does not exist
+with open("courses.csv", mode = 'r') as courses:  #reads in csv file
+    file = csv.DictReader(courses)
+    for lines in file:                              #iterates through csv rows
+        script = "INSERT INTO courses VALUES(\"" + lines['code'] + "\"," + lines['mark'] + "," + lines['id'] + ")" #scripts 
+        c.execute(script)
 
 #==========================================================
 
 db.commit() #save changes
 db.close()  #close database
 
-#open db if exists, otherwise create
-db = sqlite3.connect("foo")
-
-c = db.cursor() #facilitate db ops
-
-c.execute("CREATE TABLE roster(name TEXT, userid INTEGER)")
-
-db.commit() #save changes
-db.close()
