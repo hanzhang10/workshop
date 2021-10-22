@@ -13,18 +13,23 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 c.execute("CREATE TABLE IF NOT EXISTS roster(name TEXT, age INTEGER, id INTEGER)") #creates table if one does not exist
 
 # < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
+
 with open("students.csv", mode = 'r') as students:  #reads in csv file
     file = csv.DictReader(students)
     for lines in file:                              #iterates through csv rows
-        script = "INSERT INTO roster VALUES(\"" + lines['name'] + "\"," + lines['age'] + "," + lines['id'] + ")" #scripts
-        c.execute(script)
+        query = "INSERT INTO roster VALUES(\"" + lines['name'] \
+         + "\"," + lines['age'] \
+         + "," + lines['id'] + ")" #scripts
+        c.execute(query)
 
 c.execute("CREATE TABLE IF NOT EXISTS courses(code TEXT, mark INTEGER, id INTEGER)") #creates table if one does not exist
 with open("courses.csv", mode = 'r') as courses:  #reads in csv file
     file = csv.DictReader(courses)
     for lines in file:                              #iterates through csv rows
-        script = "INSERT INTO courses VALUES(\"" + lines['code'] + "\"," + lines['mark'] + "," + lines['id'] + ")" #scripts
-        c.execute(script)
+        query = "INSERT INTO courses VALUES(\"" + lines['code'] \
+        + "\"," + lines['mark'] \
+        + "," + lines['id'] + ")" #scripts
+        c.execute(query)
 
 #==========================================================
 
