@@ -1,106 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Team Pirap: Kevin Cao, Han Zhang
-       SoftDev
-       K18: Comic Sans Syndrome
-       2021-11-22
-    -->
-  <style>
-    html {
+<!--
+Team Pirap: Kevin Cao, Han Zhang
+SoftDev
+K18: Comic Sans Syndrome
+2021-11-22
+-->
+<style>
+  html {
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+  }
+
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #707070;
+    border: solid 10px #5b5b5b;
+    margin: 0;
+    padding: 0;
     height: 100%;
     width: 100%;
-    }
+    font-family: Calibri;
+  }
 
-    body {
-        display: flex;
-        flex-wrap: wrap;
-        background-color: #707070;
-        border: solid 10px #5b5b5b;
-        margin: 0;
-        padding: 0;
-        height: calc(100% - 20px);
-        width: calc(100% - 20px);
-        font-family: Calibri;
-    }
+  h1 {
+    display: flex;
+    background-color: #cccccc;
+    width: 100%;
+    height: 5%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
 
-    h1 {
-        background-color: #cccccc;
-        margin: 0;
-        width: 100%;
-        height: 5%;
-        text-align: center;
-        color: white;
-    }
+  nav {
+    width: 15%;
+    height: 90%;
+    padding-left: 2%;
+    font-weight: bold;
+  }
 
-    nav {
-        width: 18%;
-        height: 90%;
-        padding-left: 2%;
-        font-weight: bold;
-    }
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
 
-    nav ul {
-        list-style: none;
-        padding: 0;
-    }
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
 
-    nav a {
-        color: white;
-        text-decoration: none;
-    }
+  .main {
+    width: 82%;
+    height: 90%;
+    padding-right: 1%;
+  }
 
-    .main {
-        width: 75%;
-        height: 90%;
-    }
+  footer {
+    display: flex;
+    background-color: #464545;
+    width: 100%;
+    height: 5%;
+    justify-content: right;
+    align-items: center;
+    font-size: x-large;
+    color: lightgray;
+    padding-right: 10px;
+  }
+</style>
 
-    footer {
-        background-color: #464545;
-        width: 100%;
-        height: 5%;
-        bottom: 0;
-        text-align: right;
-        font-size: x-large;
-        color: lightgray;
-        padding-right: 10px;
-        padding-top: 8px;
-    }
-  </style>
-  <head>
-    <meta charset="utf-8"/>
-    <title>foo title</title>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <title>foo title</title>
+</head>
 
-  <body>
-    <h1>foo heading 1</h1>
-    <nav>
-      <h3>nav foo</h3>
-      <ul>
-        <li><a href="">dis</a></li>
-        <li><a href="">dat</a></li>
-        <li><a href="">de udda ting</a></li>
-      </ul>
-    </nav>
-    <div class='main'>
-      <h2>main foo heading</h2>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet mauris commodo quis imperdiet. Adipiscing bibendum est ultricies integer quis auctor elit sed vulputate. Mi tempus imperdiet nulla malesuada pellentesque. Sed adipiscing diam donec adipiscing. Accumsan lacus vel facilisis volutpat. Amet commodo nulla facilisi nullam vehicula. Arcu bibendum at varius vel. Viverra suspendisse potenti nullam ac tortor vitae purus. Mattis enim ut tellus elementum sagittis vitae et leo duis. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. Tincidunt dui ut ornare lectus sit amet. Eget nunc lobortis mattis aliquam faucibus purus in massa. Aliquam etiam erat velit scelerisque.
-        <br>
-        <br>
-        Nec nam aliquam sem et. Id interdum velit laoreet id donec ultrices tincidunt arcu non. Amet consectetur adipiscing elit pellentesque habitant morbi tristique. Ultricies lacus sed turpis tincidunt id aliquet risus. Eu ultrices vitae auctor eu augue ut. Sed elementum tempus egestas sed sed risus pretium quam vulputate. Amet nisl suscipit adipiscing bibendum. Nisl rhoncus mattis rhoncus urna neque viverra. Commodo viverra maecenas accumsan lacus vel. Blandit libero volutpat sed cras ornare arcu dui vivamus. Sed augue lacus viverra vitae congue eu consequat ac felis. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Ultrices vitae auctor eu augue ut lectus. Convallis aenean et tortor at risus viverra adipiscing at in. Nullam vehicula ipsum a arcu cursus vitae. In fermentum et sollicitudin ac orci phasellus. Lectus sit amet est placerat in egestas erat imperdiet. Aliquam vestibulum morbi blandit cursus risus. Turpis tincidunt id aliquet risus feugiat in ante metus. Massa id neque aliquam vestibulum.
-        <br>
-        <br>
-        Tellus in metus vulputate eu scelerisque felis imperdiet proin. Neque vitae tempus quam pellentesque nec nam. Risus ultricies tristique nulla aliquet enim tortor at. Lectus mauris ultrices eros in. Vitae aliquet nec ullamcorper sit amet risus nullam eget. Viverra tellus in hac habitasse. Arcu non sodales neque sodales. In hac habitasse platea dictumst quisque sagittis purus sit amet. Vitae et leo duis ut diam quam. Donec et odio pellentesque diam. Sagittis eu volutpat odio facilisis mauris sit amet. Velit ut tortor pretium viverra suspendisse potenti nullam ac tortor. Vivamus at augue eget arcu dictum varius. Et tortor consequat id porta nibh venenatis cras. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Magna etiam tempor orci eu lobortis.
-        <br>
-        <br>
-        Porta lorem mollis aliquam ut porttitor leo a. Pretium nibh ipsum consequat nisl vel pretium lectus quam. Scelerisque eu ultrices vitae auctor eu augue. Velit laoreet id donec ultrices tincidunt arcu non sodales. Penatibus et magnis dis parturient montes nascetur ridiculus mus. Dolor sit amet consectetur adipiscing elit ut. Eget duis at tellus at urna condimentum. In hac habitasse platea dictumst vestibulum rhoncus. Porta non pulvinar neque laoreet suspendisse. Ipsum suspendisse ultrices gravida dictum fusce ut placerat. Eleifend quam adipiscing vitae proin. Varius quam quisque id diam. Eget lorem dolor sed viverra. Lorem sed risus ultricies tristique nulla aliquet enim. Purus viverra accumsan in nisl nisi scelerisque.        
-        <br>
-        <br>
-        <a href ="https://loremipsum.io/">Lorem Ipsum Generator</a>
-    </div>
-    <footer>
-      Copyright &copy; 2021 Kevin Cao & Han Zhang
-    </footer>
+<body>
+  <h1>foo heading 1</h1>
+  <nav>
+    <h3>nav foo</h3>
+    <ul>
+      <li><a href="">dis</a></li>
+      <li><a href="">dat</a></li>
+      <li><a href="">de udda ting</a></li>
+    </ul>
+  </nav>
+  <div class='main'>
+    <h2>main foo heading</h2>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Sit amet mauris commodo quis imperdiet. Adipiscing bibendum est ultricies integer quis auctor elit sed
+    vulputate. Mi tempus imperdiet nulla malesuada pellentesque. Sed adipiscing diam donec adipiscing. Accumsan lacus
+    vel facilisis volutpat. Amet commodo nulla facilisi nullam vehicula. Arcu bibendum at varius vel. Viverra
+    suspendisse potenti nullam ac tortor vitae purus. Mattis enim ut tellus elementum sagittis vitae et leo duis.
+    Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. Tincidunt dui ut ornare lectus sit amet. Eget
+    nunc lobortis mattis aliquam faucibus purus in massa. Aliquam etiam erat velit scelerisque.
+    <br>
+    <br>
+    Nec nam aliquam sem et. Id interdum velit laoreet id donec ultrices tincidunt arcu non. Amet consectetur adipiscing
+    elit pellentesque habitant morbi tristique. Ultricies lacus sed turpis tincidunt id aliquet risus. Eu ultrices vitae
+    auctor eu augue ut. Sed elementum tempus egestas sed sed risus pretium quam vulputate. Amet nisl suscipit adipiscing
+    bibendum. Nisl rhoncus mattis rhoncus urna neque viverra. Commodo viverra maecenas accumsan lacus vel. Blandit
+    libero volutpat sed cras ornare arcu dui vivamus. Sed augue lacus viverra vitae congue eu consequat ac felis. Ipsum
+    dolor sit amet consectetur adipiscing elit pellentesque habitant. Ultrices vitae auctor eu augue ut lectus.
+    Convallis aenean et tortor at risus viverra adipiscing at in. Nullam vehicula ipsum a arcu cursus vitae. In
+    fermentum et sollicitudin ac orci phasellus. Lectus sit amet est placerat in egestas erat imperdiet. Aliquam
+    vestibulum morbi blandit cursus risus. Turpis tincidunt id aliquet risus feugiat in ante metus. Massa id neque
+    aliquam vestibulum.
+    <br>
+    <br>
+    Tellus in metus vulputate eu scelerisque felis imperdiet proin. Neque vitae tempus quam pellentesque nec nam. Risus
+    ultricies tristique nulla aliquet enim tortor at. Lectus mauris ultrices eros in. Vitae aliquet nec ullamcorper sit
+    amet risus nullam eget. Viverra tellus in hac habitasse. Arcu non sodales neque sodales. In hac habitasse platea
+    dictumst quisque sagittis purus sit amet. Vitae et leo duis ut diam quam. Donec et odio pellentesque diam. Sagittis
+    eu volutpat odio facilisis mauris sit amet. Velit ut tortor pretium viverra suspendisse potenti nullam ac tortor.
+    Vivamus at augue eget arcu dictum varius. Et tortor consequat id porta nibh venenatis cras. Rhoncus mattis rhoncus
+    urna neque viverra justo nec ultrices. Magna etiam tempor orci eu lobortis.
+    <br>
+    <br>
+    Porta lorem mollis aliquam ut porttitor leo a. Pretium nibh ipsum consequat nisl vel pretium lectus quam.
+    Scelerisque eu ultrices vitae auctor eu augue. Velit laoreet id donec ultrices tincidunt arcu non sodales. Penatibus
+    et magnis dis parturient montes nascetur ridiculus mus. Dolor sit amet consectetur adipiscing elit ut. Eget duis at
+    tellus at urna condimentum. In hac habitasse platea dictumst vestibulum rhoncus. Porta non pulvinar neque laoreet
+    suspendisse. Ipsum suspendisse ultrices gravida dictum fusce ut placerat. Eleifend quam adipiscing vitae proin.
+    Varius quam quisque id diam. Eget lorem dolor sed viverra. Lorem sed risus ultricies tristique nulla aliquet enim.
+    Purus viverra accumsan in nisl nisi scelerisque.
+    <br>
+    <br>
+    <a href="https://loremipsum.io/">Lorem Ipsum Generator</a>
+  </div>
+  <footer>
+    Copyright &copy; 2021 Kevin Cao & Han Zhang
+  </footer>
 
-  </body>
+</body>
 
 </html>
