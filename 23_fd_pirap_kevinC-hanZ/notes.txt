@@ -5,4 +5,3 @@ K23: No. 2?
 
 Similar to bootstrap in the sense that it was very easy to implement.
 Team Ducks did a good job showing the grid system.
-No css file.
