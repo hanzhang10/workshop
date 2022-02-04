@@ -1,0 +1,9 @@
+// Team HE:: Han Zhang, Edwin Zheng
+// SoftDev 
+// K27 -- Basic functions in JavaScript
+// 2022-02-03
+
+Ran fact(n) and fibonacci(n) in web console to test functions
+Is there a better way to test javascript code?
+
+fibonacci struggled to give result when using higher values of n
