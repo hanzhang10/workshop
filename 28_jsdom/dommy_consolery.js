@@ -62,10 +62,10 @@ var stripe = function() {
   }
 };
 
-function fact(n) {
+function fac(n) {
 	if (n <= 1)
 		return 1;
-	return (n * (fact (n - 1)));
+	return (n * (fac(n - 1)));
 }
 
 function fib(n) {
@@ -78,5 +78,5 @@ function gcd(a,b) {
     if (b == 0)
         return a;
     else 
-        return (gcd(b,a%b))
+        return (gcd(b,b%a))
 }
