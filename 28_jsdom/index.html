@@ -24,6 +24,7 @@
 
     <h1 id="h" class="blue">Hello World!</h1>
 
+    <button id="button"> fib(10) </button>
     <div id="a">fib(5) = <span id = "fib"></span></div>
     <div id="a">fac(5) = <span id = "fac"></span></div>
     <div id="a">gcd(5,10) = <span id = "gcd"></span></div>
@@ -42,9 +43,10 @@
     <script src="dommy_consolery.js"></script>   
 
     <script>
-      document.getElementById("fib").innerHTML = fib(5)
-      document.getElementById("fac").innerHTML = fac(5)
-      document.getElementById("gcd").innerHTML = gcd(5,10)
+      document.getElementById("fib").innerHTML = fib(5);
+      document.getElementById("fac").innerHTML = fac(5);
+      document.getElementById("gcd").innerHTML = gcd(5,10);
+      document.getElementById("button").addEventListener("click", console.log('clicked'));
     </script> 
     
 
