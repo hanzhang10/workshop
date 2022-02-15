@@ -1,3 +1,8 @@
+// Team HE: Han Zhang, Edwin Zheng
+// SoftDev
+// K30 -- Canvas Based JS Drawing
+// 2022-02-14
+
 // Retrieve Canvas Node
 var c = document.getElementById("slate");
 
