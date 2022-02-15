@@ -1,54 +1,64 @@
-// Team HE: Han Zhang, Edwin Zheng
-// SoftDev
-// K30 -- Canvas Based JS Drawing
-// 2022-02-14
+// Retrieve Canvas Node
+var c = document.getElementById("slate");
 
-//retrieve node in DOM via ID
-var c = document.getElementById("slate")
-
-//instantiate a CanvasRenderingContext2D Object
+// Instantiate a CanvasRenderingContext2D object
 var ctx = c.getContext("2d");
 
-//intit global state var
+// Toggle Mode Type
 var mode = "rect";
+var toggler = document.getElementById("buttonToggle");
 
-//var toggleMode = function(e) {
-var toggleMode = function(e) {
-    console.log("toggling...")
-    if ( ) {
 
+// Toggle Mode on Button Click
+
+var toggleMode = (e) => {
+    if (mode == "rect") {
+        mode = "circle";
+        toggler.innerHTML = "Circle"
+    } else {
+        mode = "rect";
+        toggler.innerHTML = "Rect"
     }
-    else {
-
-    }
 }
 
-var drawRect = function(e) {
-    var mouseX = c.offsetX
-    var mouseY = c.offsetY
-    console.log("mouseclick registered at ", mouseX, mouseY)
+toggler.addEventListener("click", toggleMode);
 
-}
+// Draw items
 
-//var drawCircle = functoin(e) {
-var drawCircle = (e) => {
-
-    console.log("mouseclick registered at ", mouseX, mouseY);
-
-}
-
-//var draw = function(e) {
 var draw = (e) => {
-
+    if (mode == "rect") {
+       drawRect(e);
+    } else {
+        drawCircle(e);
+    }
 }
 
-//var wipeCanvas = function() {
-var wipeCanvas = () => {
-    c.clearRect(0,0, c.clientWidth, c.clientHeight)
+var drawRect = (e) => {
+    let mouseX = e.offsetX;
+    let mouseY = e.offsetY;
+
+    ctx.rect(mouseX, mouseY, 100, 150)
+    ctx.fillStyle = "red"
+    ctx.fill()
 }
+
+var drawCircle = (e) => {
+    let mouseX = e.offsetX;
+    let mouseY = e.offsetY;
+    
+    ctx.beginPath()
+    ctx.arc(mouseX, mouseY, 50, 0, 2 * Math.PI)
+    ctx.fillStyle = "red"
+    ctx.fill()
+    ctx.stroke()
+}
+
+var clearButton = document.getElementById("buttonClear")
+
+var wipeCanvas = function() {
+    ctx.clearRect(0, 0, c.clientWidth, c.height)
+}
+
+clearButton.addEventListener("click", wipeCanvas);
 
 c.addEventListener("click", draw)
-var bToggler = document.
-bToggler. ;
-var clearB = ;
-clearB. ;
