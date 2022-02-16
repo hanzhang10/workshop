@@ -12,7 +12,7 @@ var stopButton = document.getElementById("buttonStop")
 var ctx = c.getContext("2d")
 
 //set fill color to team color
-ctx.fillStyle = // YOUR CODE HERE
+ctx.fillStyle = "red"
 
 var requestID;  //init global var for use with animation frames
 
@@ -58,12 +58,18 @@ var drawDot = () => {
     window.requestAnimationFrame()
 
    */
-    ctx.beginPath();
-    ctx.arc(0, 0, radius, 0, 2 * Math.PI);
-    ctx.fillStyle = "red";
-    ctx.fill();
-    ctx.stroke();
-    window.requestAnimationFrame(drawDot);
+  if (requestID) {
+    window.cancelAnimationFrame(requestID)
+  }
+
+  ctx.clearRect(0, 0, c.clientWidth, c.height)
+  ctx.beginPath();
+  ctx.arc(c.clientWidth / 2, c.clientHeight / 2, radius, 0, 2 * Math.PI);
+  ctx.fillStyle = "red";
+  ctx.fill();
+  ctx.stroke();
+  requestID = window.requestAnimationFrame(drawDot);
+  
 };
 
 
@@ -71,7 +77,7 @@ var drawDot = () => {
 var stopIt = () => {
   console.log("stopIt invoked...")
   console.log( requestID );
-
+  window.cancelAnimationFrame(requestID)
   // YOUR CODE HERE
   /*
     ...to
