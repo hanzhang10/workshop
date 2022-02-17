@@ -9,7 +9,6 @@ var dotButton = document.getElementById("buttonCircle")
 var stopButton = document.getElementById("buttonStop")
 var screenSaver = document.getElementById("screensaver")
 var image = new Image();
-image.src = 'logo_dvd.jpg';
 
 //prepare to interact with canvas in 2D
 var ctx = c.getContext("2d")
@@ -91,6 +90,12 @@ var stopIt = () => {
   */
 };
 
+var x;
+var y;
+image.src = 'logo_dvd.jpg';
+var xgrow = true;
+var ygrow = true;
+
 //var screen = function() {
 var screen = () => {
   console.log("screensaver invoked...");
@@ -100,10 +105,43 @@ var screen = () => {
   }
 
   ctx.clearRect(0, 0, c.clientWidth, c.height);
+  ctx.drawImage(image, x, y, 100, 50);
 
-  ctx.drawImage(image, Math.random() * c.clientWidth, Math.random() * c.clientHeight, 100, 50);
+  if (xgrow === true) {
+    x++;}
+  else {
+    x--;}
+
+  if (ygrow === true) {
+    y++;}
+  else {
+    y--;}
+
+  if (x >= (c.clientWidth - 100)) {
+    xgrow = false;
+  }
+
+  if (x <= 0) {
+    xgrow = true;
+  }
+
+  if (y >= (c.clientHeight - 50)) {
+    ygrow = false;;
+  }
+
+  if (y <= 0) {
+    ygrow = true;
+  }
+
+  requestID = window.requestAnimationFrame(screen);
+}
+
+var randomCoord = () => {
+  x = Math.random() * (c.clientWidth - 100);
+  y = Math.random() * (c.clientHeight - 50);
 }
 
 dotButton.addEventListener( "click", drawDot );
 stopButton.addEventListener( "click",  stopIt );
-screenSaver.addEventListener( "click", screen)
+screenSaver.addEventListener( "click", screen);
+screenSaver.addEventListener( "click", randomCoord);
